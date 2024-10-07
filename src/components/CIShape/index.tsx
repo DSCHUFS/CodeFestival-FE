@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from 'react';
-import { Canvas, ThreeElements, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
 import { Environment, OrbitControls } from '@react-three/drei';
+import { Canvas, ThreeElements, useFrame } from '@react-three/fiber';
+import { useRef, useEffect } from 'react';
+import * as THREE from 'three';
 
 const DShape = (props: ThreeElements['mesh']) => {
   const meshRef = useRef<THREE.Mesh>(null!);
@@ -48,7 +48,11 @@ const DShape = (props: ThreeElements['mesh']) => {
       {...props}
       ref={meshRef as never}
       scale={[1, 1, 1]}
-      rotation={[THREE.MathUtils.degToRad(18), THREE.MathUtils.degToRad(26), THREE.MathUtils.degToRad(8.1)]}
+      rotation={[
+        THREE.MathUtils.degToRad(18),
+        THREE.MathUtils.degToRad(26),
+        THREE.MathUtils.degToRad(8.1),
+      ]}
     >
       <meshStandardMaterial attach="material" metalness={0.8} roughness={0.2} color={0x363850} />
     </mesh>
@@ -56,13 +60,15 @@ const DShape = (props: ThreeElements['mesh']) => {
 };
 
 const CIShape = () => {
-  return <Canvas camera={{ position: [0, 0, 80], fov: 75 }}>
-    <ambientLight intensity={0.5} />
-    <directionalLight position={[5, 10, 7.5]} intensity={1} />
-    <Environment preset="sunset" />
-    <DShape />
-    <OrbitControls enableRotate={false} enableZoom={false} enablePan={false} />
-  </Canvas>;
+  return (
+    <Canvas camera={{ position: [0, 0, 80], fov: 75 }}>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[5, 10, 7.5]} intensity={1} />
+      <Environment preset="sunset" />
+      <DShape />
+      <OrbitControls enableRotate={false} enableZoom={false} enablePan={false} />
+    </Canvas>
+  );
 };
 
 export default CIShape;

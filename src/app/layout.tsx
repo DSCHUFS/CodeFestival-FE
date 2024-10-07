@@ -18,14 +18,12 @@ export const metadata: Metadata = {
 
 type RootLayoutProps = {
   children: ReactNode;
-}
+};
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
-    <body className={pretendard.className}>
-    {children}
-    </body>
+      <body className={pretendard.className}>{children}</body>
     </html>
   );
 }

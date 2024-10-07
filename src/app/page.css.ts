@@ -1,6 +1,7 @@
 import { style } from '@vanilla-extract/css';
-import { rem } from '@/utils/pxto';
+
 import { theme } from '@/styles/theme.css';
+import { rem } from '@/utils/pxto';
 
 export const background = style({
   position: 'absolute',
@@ -19,7 +20,7 @@ export const background = style({
 export const branding = style({
   marginTop: rem(48),
   color: theme.colors.white,
-  fontSize: rem(32),
+  fontSize: rem(38),
   fontWeight: 600,
   lineHeight: '100%',
   textAlign: 'center',
