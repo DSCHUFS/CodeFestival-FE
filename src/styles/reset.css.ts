@@ -48,6 +48,4 @@ globalStyle('ul', {
 globalStyle('*', {
   margin: 0,
   padding: 0,
-  font: 'inherit',
-  color: 'inherit',
 });

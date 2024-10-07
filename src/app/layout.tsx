@@ -1,14 +1,25 @@
+import '@/styles/globals.css';
+
+import { clsx } from 'clsx';
 import type { Metadata } from 'next';
+import { JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
 
-import '@/styles/globals.css';
+const jetbrains = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['500', '600'],
+  preload: true,
+  variable: '--font-jetbrains',
+});
 
 const pretendard = localFont({
   src: './_fonts/PretendardVariable.woff2',
   display: 'swap',
   weight: '45 920',
   preload: true,
+  variable: '--font-pretendard',
 });
 
 export const metadata: Metadata = {
@@ -23,7 +34,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
-      <body className={pretendard.className}>{children}</body>
+      <body className={clsx(pretendard.variable, jetbrains.variable)}>{children}</body>
     </html>
   );
 }

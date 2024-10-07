@@ -4,7 +4,7 @@ import { rem } from '@/utils/pxto';
 
 export const theme = createGlobalTheme(':root', {
   colors: {
-    black: '#000000',
+    black: '#000105',
     white: '#FFFFFF',
 
     // gray
@@ -32,7 +32,7 @@ export const theme = createGlobalTheme(':root', {
   sizes: {
     appWidth: rem(1080),
     appInlinePadding: rem(20),
-    appHeaderHeight: rem(68),
+    appHeaderHeight: rem(74),
   },
 
   layouts: {
