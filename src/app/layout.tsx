@@ -1,14 +1,74 @@
 import '@/styles/globals.css';
 
 import { clsx } from 'clsx';
+import { Metadata, Viewport } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
 
+import Layout from '@/components/Layout';
+
+export const metadata: Metadata = {
+  title: '2024 HUFS CodeFestival',
+  description: '2024 HUFS CodeFestival',
+  openGraph: {
+    title: '2024 HUFS CodeFestival',
+    description: '2024 HUFS CodeFestival',
+    url: 'https://codefestival.gdghufs.com',
+    type: 'website',
+    images: [
+      {
+        url: '/static/images/og_image.png',
+        width: 1200,
+        height: 630,
+        alt: '2024 HUFS CodeFestival',
+      },
+    ],
+    siteName: '2024 HUFS CodeFestival',
+    locale: 'ko_KR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '2024 HUFS CodeFestival',
+    description: '2024 HUFS CodeFestival',
+    images: [
+      {
+        url: '/static/images/og_image.png',
+        alt: '2024 HUFS CodeFestival',
+      },
+    ],
+    site: '@gdghufs',
+  },
+  icons: {
+    icon: [
+      { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/static/favicon/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '96x96', url: '/static/favicon/favicon-96x96.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/static/favicon/favicon-16x16.png' },
+    ],
+    apple: [
+      { sizes: '57x57', url: '/static/favicon/apple-icon-57x57.png' },
+      { sizes: '60x60', url: '/static/favicon/apple-icon-60x60.png' },
+      { sizes: '72x72', url: '/static/favicon/apple-icon-72x72.png' },
+      { sizes: '76x76', url: '/static/favicon/apple-icon-76x76.png' },
+      { sizes: '114x114', url: '/static/favicon/apple-icon-114x114.png' },
+      { sizes: '120x120', url: '/static/favicon/apple-icon-120x120.png' },
+      { sizes: '144x144', url: '/static/favicon/apple-icon-144x144.png' },
+      { sizes: '152x152', url: '/static/favicon/apple-icon-152x152.png' },
+      { sizes: '180x180', url: '/static/favicon/apple-icon-180x180.png' },
+    ],
+  },
+  manifest: '/static/favicon/manifest.json',
+  applicationName: '2024 HUFS CodeFestival',
+};
+
+export const viewport: Viewport = {
+  themeColor: '#FFFFFF',
+};
+
 const jetbrains = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['500', '600'],
+  weight: ['400', '500', '600'],
   preload: true,
   variable: '--font-jetbrains',
 });
@@ -28,53 +88,9 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
-      <head>
-        <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png" />
-        <link
-          rel="apple-touch-icon"
-          sizes="114x114"
-          href="/static/favicon/apple-icon-114x114.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="120x120"
-          href="/static/favicon/apple-icon-120x120.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="144x144"
-          href="/static/favicon/apple-icon-144x144.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href="/static/favicon/apple-icon-152x152.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/static/favicon/apple-icon-180x180.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/static/favicon/android-icon-192x192.png"
-        />
-        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/static/favicon/manifest.json" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/static/favicon/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
-        <title>2024 HUFS CodeFestival</title>
-        <meta name="description" content="2024 HUFS CodeFestival" />
-      </head>
-      <body className={clsx(pretendard.variable, jetbrains.variable)}>{children}</body>
+      <body className={clsx(pretendard.variable, jetbrains.variable)}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { BLUR } from '@/constants/blur';
 import { MENU } from '@/constants/menu';
 
 import * as styles from './styles.css';
 
-const Header = () => {
+const Header = async () => {
   return (
     <header className={styles.root}>
       <div className={styles.inner}>
@@ -16,6 +17,7 @@ const Header = () => {
             width={156}
             height={52}
             draggable={false}
+            blurDataURL={BLUR.ci}
             priority
           />
         </Link>

@@ -58,7 +58,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
   },
   parser: '@typescript-eslint/parser',
-  ignorePatterns: ['*.js', '.*.js', 'node_modules/', 'gatsby-*'],
+  ignorePatterns: ['*.js', '.*.js', '*.mjs', 'node_modules/'],
   overrides: [
     {
       files: ['*.js?(x)', '*.ts?(x)'],

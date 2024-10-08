@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
 import { breakpoint } from '@/styles/responsive.css';
 import { theme } from '@/styles/theme.css';
@@ -7,7 +7,7 @@ import { rem } from '@/utils/pxto';
 export const grid = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
-  paddingBlock: rem(32),
+  paddingBlock: rem(38),
   rowGap: rem(32),
 
   ...breakpoint({ tablet: { gridTemplateColumns: 'repeat(3, 1fr)' } }),
@@ -16,6 +16,16 @@ export const grid = style({
 export const organization = style({
   ...theme.layouts.columnCenterX,
   gap: rem(16),
+});
+
+globalStyle(`${organization} > a`, {
+  textDecoration: 'none',
+  opacity: 1,
+  transition: 'opacity 0.2s',
+});
+
+globalStyle(`${organization} > a:hover`, {
+  opacity: 0.8,
 });
 
 export const logo = style({

@@ -1,14 +1,16 @@
 'use client';
-import Layout from '@/components/Layout';
+import { Fragment } from 'react';
 
 import Dashboard from './_components/Dashboard';
+import Gallery from './_components/Gallery';
 import Sponsor from './_components/Sponsor';
 
 export default function Home() {
   return (
-    <Layout>
+    <Fragment>
       <Dashboard />
       <Sponsor />
-    </Layout>
+      <Gallery />
+    </Fragment>
   );
 }

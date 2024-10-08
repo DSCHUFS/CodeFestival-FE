@@ -15,5 +15,6 @@ globalStyle('html', {
 globalStyle('body', {
   paddingBottom: 'env(safe-area-inset-bottom)',
   fontFamily: 'var(--font-pretendard)',
+  backgroundColor: theme.colors.black,
   overflowX: 'hidden',
 });

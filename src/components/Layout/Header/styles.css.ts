@@ -33,6 +33,7 @@ export const navigation = style({
 
 export const menu = style({
   color: theme.colors.white,
+  fontFamily: 'var(--font-jetbrains), var(--font-pretendard)',
   fontSize: rem(16),
   fontWeight: 500,
   letterSpacing: rem(-0.1),

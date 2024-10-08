@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
 import { breakpoint } from '@/styles/responsive.css';
 import { theme } from '@/styles/theme.css';
@@ -7,6 +7,7 @@ import { rem } from '@/utils/pxto';
 export const root = style({
   ...theme.layouts.columnCenterX,
   height: `calc(100dvh - ${theme.sizes.appHeaderHeight})`,
+  zIndex: 0,
 });
 
 export const background = style({
@@ -16,11 +17,10 @@ export const background = style({
   width: '100%',
   height: '100dvh',
   opacity: 0.7,
-  background: `url('/static/images/bg.webp')`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundAttachment: 'fixed',
-  zIndex: -1,
+});
+
+globalStyle(`${background} > img`, {
+  objectFit: 'cover',
 });
 
 export const backgroundGradient = style({
@@ -33,7 +33,7 @@ export const backgroundGradient = style({
 });
 
 export const branding = style({
-  marginTop: rem(48),
+  marginTop: rem(24),
   color: theme.colors.white,
   fontFamily: 'var(--font-jetbrains)',
   fontSize: rem(28),
@@ -42,8 +42,8 @@ export const branding = style({
   textAlign: 'center',
 
   ...breakpoint({
-    mobile: { fontSize: rem(32) },
-    tablet: { fontSize: rem(38) },
+    mobile: { marginTop: rem(36), fontSize: rem(32) },
+    tablet: { marginTop: rem(48), fontSize: rem(38) },
   }),
 });
 
@@ -90,4 +90,8 @@ export const ci = style({
   height: rem(300),
   marginTop: rem(48),
   marginInline: 'auto',
+});
+
+globalStyle(`${ci} > div`, {
+  touchAction: 'auto !important',
 });
