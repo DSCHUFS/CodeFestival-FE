@@ -54,7 +54,14 @@ const DShape = (props: ThreeElements['mesh']) => {
         THREE.MathUtils.degToRad(8.1),
       ]}
     >
-      <meshStandardMaterial attach="material" metalness={0.8} roughness={0.2} color={0x363850} />
+      <meshStandardMaterial
+        attach="material"
+        metalness={0.8}
+        roughness={0.2}
+        color={0x363850}
+        emissive={0x000000}
+        emissiveIntensity={0.1}
+      />
     </mesh>
   );
 };

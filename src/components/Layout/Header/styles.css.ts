@@ -8,6 +8,7 @@ export const root = style({
   left: 0,
   width: '100%',
   height: theme.sizes.appHeaderHeight,
+  backdropFilter: `blur(${rem(8)})`,
   zIndex: theme.zIndices.header,
 });
 
