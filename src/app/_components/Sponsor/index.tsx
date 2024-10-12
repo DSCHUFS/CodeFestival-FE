@@ -1,12 +1,16 @@
+import { clsx } from 'clsx';
 import Image from 'next/image';
+import { ComponentProps } from 'react';
 
 import { BLUR } from '@/constants/blur';
 
 import * as styles from './styles.css';
 
-const Sponsor = () => {
+type SponsorProps = ComponentProps<'section'>;
+
+const Sponsor = ({ className, ...props }: SponsorProps) => {
   return (
-    <section className={styles.grid}>
+    <section className={clsx(styles.grid, className)} {...props}>
       <div className={styles.organization}>
         <p className={styles.title}>Hosted By</p>
         <a href="https://soft.hufs.ac.kr/" target="_blank">
@@ -14,8 +18,8 @@ const Sponsor = () => {
             className={styles.logo}
             src="/static/images/ci_ai_education_center.webp"
             alt="AI Education Center @ HUFS"
-            width={256}
-            height={28}
+            width={230.4}
+            height={25.2}
             draggable={false}
             blurDataURL={BLUR.ai_education_center}
           />
@@ -28,8 +32,8 @@ const Sponsor = () => {
             className={styles.logo}
             src="/static/images/ci_gdghufs.webp"
             alt="GDG on Campus HUFS"
-            width={256}
-            height={28}
+            width={230.4}
+            height={25.2}
             draggable={false}
             blurDataURL={BLUR.gdghufs}
           />
@@ -42,8 +46,8 @@ const Sponsor = () => {
             className={styles.logo}
             src="/static/images/ci_easypub.webp"
             alt="EasysPublishing Co., Ltd."
-            width={256}
-            height={28}
+            width={230.4}
+            height={25.2}
             draggable={false}
             blurDataURL={BLUR.easypub}
           />

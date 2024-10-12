@@ -6,7 +6,7 @@ import { JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
 
-import Layout from '@/components/Layout';
+import Providers from '@/app/providers';
 
 export const metadata: Metadata = {
   title: '2024 HUFS CodeFestival',
@@ -83,13 +83,18 @@ const pretendard = localFont({
 
 type RootLayoutProps = {
   children: ReactNode;
+  modal: ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html lang="ko">
       <body className={clsx(pretendard.variable, jetbrains.variable)}>
-        <Layout>{children}</Layout>
+        <Providers>
+          {children}
+          {modal}
+          <div id="modal-root" />
+        </Providers>
       </body>
     </html>
   );

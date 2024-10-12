@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { Fragment } from 'react';
 
@@ -11,13 +12,20 @@ const Dashboard = () => {
   return (
     <Fragment>
       <div className={styles.background}>
-        <Image src="/static/images/bg.webp" alt="background" blurDataURL={BLUR.bg} fill priority />
+        <Image
+          src="/static/images/bg.webp"
+          alt="background"
+          blurDataURL={BLUR.bg}
+          quality={100}
+          fill
+          priority
+        />
         <div className={styles.backgroundGradient} />
         <ScrollDownIndicator />
       </div>
       <section className={styles.root}>
         <h1 className={styles.branding}>HUFS CodeFestival</h1>
-        <p className={styles.time}>31 September 2024</p>
+        <p className={styles.time}>31 October 2024</p>
         <a className={styles.registerLink} href="https://naver.com" target="_blank">
           Registration
         </a>

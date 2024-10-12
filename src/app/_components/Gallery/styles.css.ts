@@ -5,7 +5,7 @@ import { theme } from '@/styles/theme.css';
 import { rem } from '@/utils/pxto';
 
 export const title = style({
-  marginTop: rem(38),
+  marginTop: rem(60),
   color: theme.colors.white,
   fontFamily: 'var(--font-jetbrains)',
   fontSize: rem(28),

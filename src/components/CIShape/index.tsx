@@ -1,6 +1,6 @@
 import { Environment, OrbitControls } from '@react-three/drei';
 import { Canvas, ThreeElements, useFrame } from '@react-three/fiber';
-import { useRef, useEffect } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 
 const DShape = (props: ThreeElements['mesh']) => {
@@ -10,13 +10,13 @@ const DShape = (props: ThreeElements['mesh']) => {
   const elapsedTimeRef = useRef(0);
 
   useFrame(() => {
+    elapsedTimeRef.current += swaySpeedRef.current;
     if (meshRef.current) {
-      elapsedTimeRef.current += swaySpeedRef.current;
       meshRef.current.rotation.y = Math.sin(elapsedTimeRef.current) * swayAmplitudeRef.current;
     }
   });
 
-  useEffect(() => {
+  const geometry = useMemo(() => {
     const shape = new THREE.Shape();
     shape.moveTo(18.9, 9.7);
     shape.lineTo(30.5, 9.7);
@@ -37,11 +37,14 @@ const DShape = (props: ThreeElements['mesh']) => {
       curveSegments: 64,
     };
 
-    const geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
-    geometry.center();
-
-    if (meshRef.current) meshRef.current.geometry = geometry;
+    const geom = new THREE.ExtrudeGeometry(shape, extrudeSettings);
+    geom.center();
+    return geom;
   }, []);
+
+  useEffect(() => {
+    if (meshRef.current) meshRef.current.geometry = geometry;
+  }, [geometry]);
 
   return (
     <mesh
@@ -56,11 +59,11 @@ const DShape = (props: ThreeElements['mesh']) => {
     >
       <meshStandardMaterial
         attach="material"
-        metalness={0.8}
+        metalness={0.7}
         roughness={0.2}
         color={0x363850}
         emissive={0x000000}
-        emissiveIntensity={0.1}
+        emissiveIntensity={0.05}
       />
     </mesh>
   );
@@ -69,8 +72,8 @@ const DShape = (props: ThreeElements['mesh']) => {
 const CIShape = () => {
   return (
     <Canvas camera={{ position: [0, 0, 80], fov: 75 }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 10, 7.5]} intensity={1} />
+      <ambientLight intensity={0.3} />
+      <directionalLight position={[5, 10, 7.5]} intensity={0.8} />
       <Environment preset="sunset" />
       <DShape />
       <OrbitControls enableRotate={false} enableZoom={false} enablePan={false} />

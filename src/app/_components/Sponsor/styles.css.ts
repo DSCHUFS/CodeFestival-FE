@@ -29,8 +29,8 @@ globalStyle(`${organization} > a:hover`, {
 });
 
 export const logo = style({
-  width: rem(256),
-  height: rem(28),
+  width: rem(230.4),
+  height: rem(25.2),
   userSelect: 'none',
 });
 

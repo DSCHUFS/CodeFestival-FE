@@ -5,7 +5,7 @@ import { theme } from '@/styles/theme.css';
 export const wrapper = style({
   ...theme.layouts.column,
   maxWidth: theme.sizes.appWidth,
-  height: '100dvh',
+  height: 'calc(var(--vh, 1vh) * 100)',
   margin: 'auto',
 });
 

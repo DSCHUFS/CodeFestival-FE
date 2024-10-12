@@ -6,7 +6,7 @@ import { rem } from '@/utils/pxto';
 
 export const root = style({
   ...theme.layouts.columnCenterX,
-  height: `calc(100dvh - ${theme.sizes.appHeaderHeight})`,
+  height: `calc(100vh - ${theme.sizes.appHeaderHeight})`,
   zIndex: 0,
 });
 
@@ -15,7 +15,7 @@ export const background = style({
   top: 0,
   left: 0,
   width: '100%',
-  height: '100dvh',
+  height: 'calc(var(--vh, 1vh) * 100)',
   opacity: 0.7,
 });
 
