@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 
+import Footer from './Footer';
 import Header from './Header';
 import * as styles from './styles.css';
 
@@ -12,6 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className={styles.wrapper}>
       <Header />
       <main className={styles.main}>{children}</main>
+      <Footer />
     </div>
   );
 };

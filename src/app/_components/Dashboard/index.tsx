@@ -2,8 +2,8 @@
 import Image from 'next/image';
 import { Fragment } from 'react';
 
-import CIShape from '@/components/CIShape';
-import ScrollDownIndicator from '@/components/ScrollDownIndicator';
+import CIShape from '@/components/common/CIShape';
+import ScrollDownIndicator from '@/components/common/ScrollDownIndicator';
 import { BLUR } from '@/constants/blur';
 
 import * as styles from './styles.css';
@@ -26,7 +26,11 @@ const Dashboard = () => {
       <section className={styles.root}>
         <h1 className={styles.branding}>HUFS CodeFestival</h1>
         <p className={styles.time}>31 October 2024</p>
-        <a className={styles.registerLink} href="https://naver.com" target="_blank">
+        <a
+          className={styles.registerLink}
+          href="https://forms.gle/dGGqMTxni4RL2Moq7"
+          target="_blank"
+        >
           Registration
         </a>
         <div className={styles.ci}>

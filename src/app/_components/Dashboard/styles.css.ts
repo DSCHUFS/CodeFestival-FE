@@ -33,7 +33,7 @@ export const backgroundGradient = style({
 });
 
 export const branding = style({
-  marginTop: rem(24),
+  marginTop: rem(36),
   color: theme.colors.white,
   fontFamily: 'var(--font-jetbrains)',
   fontSize: rem(28),
@@ -42,8 +42,8 @@ export const branding = style({
   textAlign: 'center',
 
   ...breakpoint({
-    mobile: { marginTop: rem(36), fontSize: rem(32) },
-    tablet: { marginTop: rem(48), fontSize: rem(38) },
+    mobile: { marginTop: rem(48), fontSize: rem(32) },
+    tablet: { fontSize: rem(38) },
   }),
 });
 
@@ -77,6 +77,7 @@ export const registerLink = style({
   border: `${rem(2)} solid ${theme.colors.white}`,
   borderRadius: rem(36),
   transition: 'color 0.3s, border-color 0.3s, background-color 0.3s',
+  opacity: 0.8,
 
   ':hover': {
     color: 'rgba(255, 255, 255, 0.8)',

@@ -9,6 +9,7 @@ import { ReactNode } from 'react';
 import Providers from '@/app/providers';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://codefestival.gdghufs.com'),
   title: '2024 HUFS CodeFestival',
   description: '2024 HUFS CodeFestival',
   openGraph: {
@@ -93,7 +94,6 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
         <Providers>
           {children}
           {modal}
-          <div id="modal-root" />
         </Providers>
       </body>
     </html>

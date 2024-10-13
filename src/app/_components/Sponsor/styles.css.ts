@@ -7,7 +7,7 @@ import { rem } from '@/utils/pxto';
 export const grid = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
-  paddingBlock: rem(38),
+  paddingBlock: rem(64),
   rowGap: rem(32),
 
   ...breakpoint({ tablet: { gridTemplateColumns: 'repeat(3, 1fr)' } }),

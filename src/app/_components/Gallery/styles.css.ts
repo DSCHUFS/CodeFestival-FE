@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
 import { breakpoint } from '@/styles/responsive.css';
 import { theme } from '@/styles/theme.css';
@@ -14,21 +14,30 @@ export const title = style({
   textAlign: 'center',
 });
 
-export const description = style({
-  marginTop: rem(13),
-  color: theme.colors.white,
-  fontFamily: 'var(--font-jetbrains)',
-  fontWeight: 400,
-  fontSize: rem(16),
-  lineHeight: '150%',
-  textAlign: 'center',
-});
-
 export const grid = style({
+  position: 'relative',
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
+  width: '100%',
   paddingBlock: rem(38),
-  rowGap: rem(32),
+  paddingInline: theme.sizes.appInlinePadding,
+  gap: rem(24),
 
   ...breakpoint({ tablet: { gridTemplateColumns: 'repeat(4, 1fr)' } }),
+});
+
+export const imageContainer = style({
+  position: 'relative',
+  width: '100%',
+  height: rem(250),
+  borderRadius: rem(16),
+  overflow: 'hidden',
+  transition: 'filter 0.3s ease',
+
+  ':hover': { filter: 'brightness(1.2)' },
+});
+
+globalStyle(`${imageContainer} > img`, {
+  objectFit: 'cover',
+  transition: 'transform 0.2s',
 });

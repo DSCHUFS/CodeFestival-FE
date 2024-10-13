@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
+import { breakpoint } from '@/styles/responsive.css';
 import { theme } from '@/styles/theme.css';
 import { rem } from '@/utils/pxto';
 
@@ -22,7 +23,11 @@ export const inner = style({
 });
 
 export const ci = style({
+  width: rem(156 * 0.85),
+  height: rem(52 * 0.85),
   userSelect: 'none',
+
+  ...breakpoint({ tablet: { width: rem(156), height: rem(52) } }),
 });
 
 export const navigation = style({

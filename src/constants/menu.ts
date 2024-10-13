@@ -4,7 +4,7 @@ export const MENU = [
     href: '/faq',
   },
   {
-    title: '후원 및 협업',
-    href: '/sponsor',
+    title: 'Contact',
+    href: '/contact',
   },
 ];

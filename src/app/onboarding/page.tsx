@@ -1,14 +1,15 @@
 'use client';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-import CIShape from '@/components/CIShape';
+import CIShape from '@/components/common/CIShape';
 import { BLUR } from '@/constants/blur';
 import { rem } from '@/utils/pxto';
 
 import * as styles from './page.css';
 
-export default function Page() {
+const Content = () => {
   const searchParams = useSearchParams();
   const ci = (searchParams.get('ci') ?? '480') + 'px';
   const logo = searchParams.get('logo') ?? '156';
@@ -40,5 +41,13 @@ export default function Page() {
         />
       </div>
     </div>
+  );
+};
+
+export default function Page() {
+  return (
+    <Suspense>
+      <Content />
+    </Suspense>
   );
 }

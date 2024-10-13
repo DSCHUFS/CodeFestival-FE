@@ -2,8 +2,6 @@ import { clsx } from 'clsx';
 import Image from 'next/image';
 import { ComponentProps } from 'react';
 
-import { BLUR } from '@/constants/blur';
-
 import * as styles from './styles.css';
 
 type SponsorProps = ComponentProps<'section'>;
@@ -21,7 +19,6 @@ const Sponsor = ({ className, ...props }: SponsorProps) => {
             width={230.4}
             height={25.2}
             draggable={false}
-            blurDataURL={BLUR.ai_education_center}
           />
         </a>
       </div>
@@ -35,7 +32,6 @@ const Sponsor = ({ className, ...props }: SponsorProps) => {
             width={230.4}
             height={25.2}
             draggable={false}
-            blurDataURL={BLUR.gdghufs}
           />
         </a>
       </div>
@@ -49,7 +45,6 @@ const Sponsor = ({ className, ...props }: SponsorProps) => {
             width={230.4}
             height={25.2}
             draggable={false}
-            blurDataURL={BLUR.easypub}
           />
         </a>
       </div>

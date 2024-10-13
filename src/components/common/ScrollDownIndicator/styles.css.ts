@@ -23,6 +23,7 @@ export const wrapper = style({
   left: '50%',
   bottom: 0,
   transform: 'translate(-50%, -50%)',
+  opacity: 0.9,
 });
 
 export const scroll = style({

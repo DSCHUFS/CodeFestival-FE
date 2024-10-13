@@ -8,6 +8,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'plugin:jsx-a11y/recommended',
+    'plugin:@next/next/recommended',
   ],
   env: {
     node: true,
