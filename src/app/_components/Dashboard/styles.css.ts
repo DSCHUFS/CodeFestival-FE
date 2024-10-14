@@ -87,10 +87,14 @@ export const registerLink = style({
 });
 
 export const ci = style({
-  width: rem(300),
-  height: rem(300),
+  width: rem(280),
+  height: rem(280),
   marginTop: rem(48),
   marginInline: 'auto',
+
+  ...breakpoint({
+    mobile: { width: rem(312), height: rem(312) },
+  }),
 });
 
 globalStyle(`${ci} > div`, {

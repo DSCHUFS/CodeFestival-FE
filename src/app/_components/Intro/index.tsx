@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import * as styles from './styles.css';
 
 const Intro = () => {
@@ -13,6 +15,9 @@ const Intro = () => {
         It's a great opportunity to challenge yourself and improve your skills.
         <br />
       </p>
+      <Link className={styles.directLink} href="/2024">
+        제6회 코드페스티벌<span className="material-symbols-rounded">arrow_right_alt</span>
+      </Link>
     </section>
   );
 };

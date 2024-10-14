@@ -19,7 +19,6 @@ export const title = style({
 export const description = style({
   paddingInline: theme.sizes.appInlinePadding,
   marginTop: rem(28),
-  paddingBottom: rem(60),
   color: theme.colors.white,
   fontFamily: 'var(--font-jetbrains)',
   fontWeight: 400,
@@ -27,4 +26,22 @@ export const description = style({
   lineHeight: '200%',
   textAlign: 'center',
   wordBreak: 'break-word',
+});
+
+export const directLink = style({
+  ...theme.layouts.centerY,
+  width: 'fit-content',
+  marginTop: rem(20),
+  marginInline: 'auto',
+  marginBottom: rem(60),
+  color: theme.colors.white,
+  fontFamily: 'var(--font-jetbrains)',
+  fontSize: rem(16),
+  fontWeight: 500,
+  borderBottom: `${rem(1)} solid ${theme.colors.white}`,
+  opacity: 1,
+  gap: rem(4),
+  transition: 'opacity 0.2s',
+
+  ':hover': { opacity: 0.8 },
 });
