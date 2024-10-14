@@ -6,18 +6,10 @@ export const theme = createGlobalTheme(':root', {
   colors: {
     black: '#000105',
     white: '#FFFFFF',
+    white90: 'rgba(255, 255, 255, 0.9)',
+    white80: 'rgba(255, 255, 255, 0.8)',
 
-    // gray
-    gray25: 'var(--hcc-colors-gray-25)',
-    gray50: 'var(--hcc-colors-gray-50)',
-    gray100: 'var(--hcc-colors-gray-100)',
-    gray200: 'var(--hcc-colors-gray-200)',
-    gray300: 'var(--hcc-colors-gray-300)',
-    gray400: 'var(--hcc-colors-gray-400)',
-    gray500: 'var(--hcc-colors-gray-500)',
-    gray700: 'var(--hcc-colors-gray-700)',
-    gray800: 'var(--hcc-colors-gray-800)',
-    gray900: 'var(--hcc-colors-gray-900)',
+    primary: '#7D8296',
   },
 
   spaces: {
