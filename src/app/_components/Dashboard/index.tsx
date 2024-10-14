@@ -15,6 +15,7 @@ const Dashboard = () => {
         <Image
           src="/static/images/bg.webp"
           alt="background"
+          placeholder="blur"
           blurDataURL={BLUR.bg}
           quality={100}
           fill

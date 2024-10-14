@@ -1,9 +1,9 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
+import fs from 'fs';
+import path from 'path';
 import { getPlaiceholder } from 'plaiceholder';
 
 const getBase64 = async (src: string) => {
-  const buffer = await fs.readFile(path.join('./public', src));
+  const buffer = fs.readFileSync(path.join('./public', src));
 
   const {
     metadata: { height, width },
