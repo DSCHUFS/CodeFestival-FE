@@ -1,5 +1,4 @@
 'use client';
-import { clsx } from 'clsx';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
@@ -45,7 +44,9 @@ export default function GalleryModal({ params }: GalleryModalParams) {
           <button className={styles.imageOverlay} onClick={() => router.back()} />
           <Image className={styles.image} src={image.src} alt={image.alt} fill sizes="100%" />
           <DialogClose asChild>
-            <button className={clsx(styles.close, 'material-symbols-rounded')}>close</button>
+            <button className={styles.close}>
+              <Image src="/static/icons/ic_close_24dp.svg" alt="close" width={24} height={24} />
+            </button>
           </DialogClose>
         </div>
       </DialogContent>

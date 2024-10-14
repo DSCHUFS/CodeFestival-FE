@@ -23,9 +23,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      material-symbols:
-        specifier: ^0.25.0
-        version: 0.25.0
       next:
         specifier: 14.2.14
         version: 14.2.14(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2259,9 +2256,6 @@ packages:
     peerDependencies:
       '@types/three': '>=0.134.0'
       three: '>=0.134.0'
-
-  material-symbols@0.25.0:
-    resolution: {integrity: sha512-YYT13NN+EO3UUVMnSnzdVTwonNa1OvohavS6rUQ/Bk8ShWjlZEL0HekCd11aWW1n6bI+r4Q+po3Ti+9gmkpinw==}
 
   media-query-parser@2.0.2:
     resolution: {integrity: sha512-1N4qp+jE0pL5Xv4uEcwVUhIkwdUO3S/9gML90nqKA7v7FcOS5vUtatfzok9S9U1EJU8dHWlcv95WLnKmmxZI9w==}
@@ -5372,8 +5366,6 @@ snapshots:
     dependencies:
       '@types/three': 0.169.0
       three: 0.169.0
-
-  material-symbols@0.25.0: {}
 
   media-query-parser@2.0.2:
     dependencies:

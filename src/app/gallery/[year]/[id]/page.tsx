@@ -24,11 +24,8 @@ export default function Page({ params }: PageParams) {
   return (
     <div className={styles.imageContainer}>
       <Image className={styles.image} src={image.src} alt={image.alt} fill sizes="100%" />
-      <button
-        className={clsx(styles.close, 'material-symbols-rounded')}
-        onClick={() => router.back()}
-      >
-        close
+      <button className={clsx(styles.close)} onClick={() => router.back()}>
+        <Image src="/static/icons/ic_close_24dp.svg" alt="close" width={24} height={24} />
       </button>
     </div>
   );

@@ -10,7 +10,7 @@ const Header = async () => {
   return (
     <header className={styles.root}>
       <div className={styles.inner}>
-        <Link className={styles.ci} href="/public">
+        <Link className={styles.ci} href="/">
           <Image
             src="/static/images/ci.svg"
             alt="logo"

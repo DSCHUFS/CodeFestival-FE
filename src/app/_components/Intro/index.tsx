@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import * as styles from './styles.css';
@@ -16,7 +17,13 @@ const Intro = () => {
         <br />
       </p>
       <Link className={styles.directLink} href="/2024">
-        제6회 코드페스티벌<span className="material-symbols-rounded">arrow_right_alt</span>
+        제6회 코드페스티벌
+        <Image
+          src="/static/icons/ic_arrow_right_alt_24dp.svg"
+          alt="navigate"
+          width={24}
+          height={24}
+        />
       </Link>
     </section>
   );

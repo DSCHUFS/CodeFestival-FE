@@ -4,8 +4,8 @@ import withPlaiceholder from '@plaiceholder/next';
 const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withPlaiceholder({
+const nextConfig = {
   reactStrictMode: true,
-});
+};
 
-export default withVanillaExtract(nextConfig);
+export default withVanillaExtract(withPlaiceholder(nextConfig));

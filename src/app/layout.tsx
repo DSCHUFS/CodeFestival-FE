@@ -1,5 +1,4 @@
 import '@/styles/globals.css';
-import 'material-symbols/rounded.css';
 
 import { clsx } from 'clsx';
 import { Metadata, Viewport } from 'next';
