@@ -37,7 +37,6 @@ const Content = () => {
           width={Number(logo)}
           height={(Number(logo) / 156) * 52}
           draggable={false}
-          blurDataURL={BLUR.ci}
         />
       </div>
     </div>

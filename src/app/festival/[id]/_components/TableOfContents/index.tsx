@@ -16,7 +16,7 @@ type TableOfContentsProps = {
 };
 
 const TableOfContents = ({ toc }: TableOfContentsProps) => {
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(toc[0]?.id || null);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   const handleClick = (id: string) => {

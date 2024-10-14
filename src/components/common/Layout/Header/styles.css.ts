@@ -23,6 +23,7 @@ export const inner = style({
 });
 
 export const ci = style({
+  position: 'relative',
   width: rem(156 * 0.85),
   height: rem(52 * 0.85),
   userSelect: 'none',
@@ -31,9 +32,11 @@ export const ci = style({
 });
 
 export const navigation = style({
-  ...theme.layouts.centerY,
+  display: 'none',
   userSelect: 'none',
   gap: theme.spaces.xl,
+
+  ...breakpoint({ mobile: { ...theme.layouts.centerY } }),
 });
 
 export const menu = style({
@@ -43,4 +46,64 @@ export const menu = style({
   fontWeight: 500,
   letterSpacing: rem(-0.1),
   lineHeight: '100%',
+});
+
+export const menuTrigger = style({
+  ...theme.layouts.center,
+  userSelect: 'none',
+
+  ...breakpoint({ mobile: { display: 'none' } }),
+});
+
+export const mobileMenu = style({
+  width: '100%',
+  height: '100%',
+  padding: 0,
+});
+
+export const mobileMenuHeaderDisabled = style({
+  display: 'none',
+});
+
+export const mobileMenuOverlay = style({
+  ...theme.layouts.center,
+  width: '100%',
+  height: '100%',
+  cursor: 'default',
+});
+
+export const mobileMenuNavigation = style({
+  ...theme.layouts.column,
+  alignItems: 'flex-end',
+  width: 'fit-content',
+  padding: theme.sizes.appInlinePadding,
+  marginLeft: 'auto',
+  textAlign: 'end',
+  gap: rem(28),
+});
+
+export const mobileMenuItem = style({
+  width: 'fit-content',
+  color: theme.colors.white,
+  fontFamily: 'var(--font-jetbrains)',
+  fontSize: rem(32),
+  fontWeight: 600,
+  letterSpacing: rem(-0.1),
+  lineHeight: '100%',
+  textDecoration: 'none',
+  transition: 'color 0.2s',
+
+  ':hover': { color: theme.colors.white80 },
+});
+
+export const mobileMenuClose = style({
+  ...theme.layouts.center,
+  position: 'absolute',
+  top: rem(25),
+  right: theme.sizes.appInlinePadding,
+  userSelect: 'none',
+  opacity: 1,
+  transition: 'opacity 0.2s',
+
+  ':hover': { opacity: 0.8 },
 });

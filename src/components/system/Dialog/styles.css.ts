@@ -20,7 +20,7 @@ export const overlay = style({
   bottom: 0,
   left: 0,
   zIndex: theme.zIndices.overlay,
-  backgroundColor: 'rgba(0, 0, 0, 0.4)',
+  backgroundColor: 'rgba(0, 0, 0, 0.7)',
   inset: 0,
 
   selectors: {
@@ -72,7 +72,6 @@ export const footer = style({
 
 export const title = style({
   margin: 0,
-  color: theme.colors.gray900,
   fontSize: rem(18),
   fontWeight: 600,
   lineHeight: '140%',
@@ -80,7 +79,6 @@ export const title = style({
 
 export const description = style({
   margin: 0,
-  color: theme.colors.gray300,
   fontSize: rem(16),
   fontWeight: 500,
   lineHeight: '140%',
@@ -107,12 +105,7 @@ export const close = style({
   cursor: 'pointer',
 
   selectors: {
-    '&:hover': {
-      opacity: 1,
-    },
-
-    '&:disabled': {
-      pointerEvents: 'none',
-    },
+    '&:hover': { opacity: 1 },
+    '&:disabled': { pointerEvents: 'none' },
   },
 });

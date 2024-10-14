@@ -7,35 +7,36 @@ import localFont from 'next/font/local';
 import { ReactNode } from 'react';
 
 import Providers from '@/app/providers';
+import { METADATA } from '@/constants/metadata';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://codefestival.gdghufs.com'),
-  title: '2024 HUFS CodeFestival',
-  description: '2024 HUFS CodeFestival',
+  metadataBase: new URL(METADATA.url),
+  title: METADATA.title,
+  description: METADATA.description,
   openGraph: {
-    title: '2024 HUFS CodeFestival',
-    description: '2024 HUFS CodeFestival',
-    url: 'https://codefestival.gdghufs.com',
+    title: METADATA.title,
+    description: METADATA.description,
+    url: METADATA.url,
     type: 'website',
     images: [
       {
         url: '/static/images/og_image.png',
         width: 1200,
         height: 630,
-        alt: '2024 HUFS CodeFestival',
+        alt: METADATA.title,
       },
     ],
-    siteName: '2024 HUFS CodeFestival',
+    siteName: METADATA.siteName,
     locale: 'ko_KR',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '2024 HUFS CodeFestival',
-    description: '2024 HUFS CodeFestival',
+    title: METADATA.title,
+    description: METADATA.description,
     images: [
       {
         url: '/static/images/og_image.png',
-        alt: '2024 HUFS CodeFestival',
+        alt: METADATA.title,
       },
     ],
     site: '@gdghufs',
