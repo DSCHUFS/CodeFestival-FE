@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { FESTIVAL } from '@/constants/menu';
+
 import * as styles from './styles.css';
 
 const Intro = () => {
@@ -16,7 +18,7 @@ const Intro = () => {
         It's a great opportunity to challenge yourself and improve your skills.
         <br />
       </p>
-      <Link className={styles.directLink} href="/2024">
+      <Link className={styles.directLink} href={FESTIVAL.current}>
         제6회 코드페스티벌
         <Image
           src="/static/icons/ic_arrow_right_alt_24dp.svg"

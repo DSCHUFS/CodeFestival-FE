@@ -1,7 +1,7 @@
 export const MENU = [
   {
     title: '제6회 코드페스티벌',
-    href: '/2024',
+    href: '/festival/6',
   },
   {
     title: 'FAQ',
@@ -12,3 +12,7 @@ export const MENU = [
     href: '/contact',
   },
 ];
+
+export const FESTIVAL = {
+  current: '/festival/6',
+};
