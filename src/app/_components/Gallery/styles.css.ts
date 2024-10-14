@@ -12,6 +12,8 @@ export const title = style({
   fontWeight: 600,
   lineHeight: '100%',
   textAlign: 'center',
+
+  ...breakpoint({ tablet: { fontSize: rem(32) } }),
 });
 
 export const grid = style({
