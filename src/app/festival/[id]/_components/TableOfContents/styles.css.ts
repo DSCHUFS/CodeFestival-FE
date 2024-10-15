@@ -27,6 +27,8 @@ export const item = style({
   fontWeight: 400,
   cursor: 'pointer',
   transition: 'color 0.2s',
+
+  ':hover': { color: theme.colors.primary },
 });
 
 export const active = style({

@@ -34,6 +34,7 @@ const Dashboard = () => {
         >
           Registration
         </a>
+        <p className={styles.souvenir}>간단한 식사와 기념품이 제공됩니다</p>
         <div className={styles.ci}>
           <CIShape />
         </div>

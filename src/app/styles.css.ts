@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
+import { theme } from '@/styles/theme.css';
 import { rem } from '@/utils/pxto';
 
 export const divider = style({
@@ -9,4 +10,8 @@ export const divider = style({
   border: 'none',
   borderRadius: rem(8),
   backgroundColor: 'rgba(255, 255, 255, 0.15)',
+});
+
+export const errorContainer = style({
+  ...theme.layouts.center,
 });

@@ -17,9 +17,6 @@ export default async function Page({ params }: PageProps) {
   const { id } = params;
 
   const filePath = path.join(process.cwd(), 'content/histories', `${id}.mdx`);
-  if (!fs.existsSync(filePath)) {
-    return null;
-  }
   const markdownWithMeta = fs.readFileSync(filePath, 'utf-8');
   const { content } = matter(markdownWithMeta);
 

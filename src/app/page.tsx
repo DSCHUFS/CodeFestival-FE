@@ -4,7 +4,7 @@ import Dashboard from './_components/Dashboard';
 import Gallery from './_components/Gallery';
 import Intro from './_components/Intro';
 import Sponsor from './_components/Sponsor';
-import * as styles from './page.css';
+import * as styles from './styles.css';
 
 export default function Page() {
   return (

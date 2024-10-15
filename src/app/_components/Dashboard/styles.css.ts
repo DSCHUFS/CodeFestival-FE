@@ -33,7 +33,7 @@ export const backgroundGradient = style({
 });
 
 export const branding = style({
-  marginTop: rem(36),
+  marginTop: rem(28),
   color: theme.colors.white,
   fontFamily: 'var(--font-jetbrains)',
   fontSize: rem(28),
@@ -42,7 +42,7 @@ export const branding = style({
   textAlign: 'center',
 
   ...breakpoint({
-    mobile: { marginTop: rem(48), fontSize: rem(32) },
+    mobile: { marginTop: rem(36), fontSize: rem(32) },
     tablet: { fontSize: rem(38) },
   }),
 });
@@ -86,10 +86,22 @@ export const registerLink = style({
   },
 });
 
+export const souvenir = style({
+  marginTop: rem(24),
+  color: theme.colors.white80,
+  fontFamily: 'var(--font-jetbrains)',
+  fontSize: rem(12),
+  fontWeight: 500,
+  lineHeight: '100%',
+  textAlign: 'center',
+
+  ...breakpoint({ mobile: { fontSize: rem(13) } }),
+});
+
 export const ci = style({
   width: rem(280),
   height: rem(280),
-  marginTop: rem(48),
+  marginTop: rem(32),
   marginInline: 'auto',
 
   ...breakpoint({

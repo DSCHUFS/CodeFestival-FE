@@ -17,4 +17,5 @@ globalStyle('body', {
   fontFamily: 'var(--font-pretendard)',
   backgroundColor: theme.colors.black,
   overflowX: 'hidden',
+  overflowY: 'scroll',
 });

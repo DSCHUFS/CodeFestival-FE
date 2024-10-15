@@ -6,8 +6,13 @@ export const theme = createGlobalTheme(':root', {
   colors: {
     black: '#000105',
     white: '#FFFFFF',
-    white90: 'rgba(255, 255, 255, 0.9)',
+    white05: 'rgba(255, 255, 255, 0.05)',
+    white10: 'rgba(255, 255, 255, 0.1)',
+    white20: 'rgba(255, 255, 255, 0.2)',
+    white60: 'rgba(255, 255, 255, 0.6)',
+    white70: 'rgba(255, 255, 255, 0.7)',
     white80: 'rgba(255, 255, 255, 0.8)',
+    white90: 'rgba(255, 255, 255, 0.9)',
 
     primary: '#7D8296',
   },
