@@ -10,16 +10,16 @@ const Intro = () => {
     <section>
       <h2 className={styles.title}>INTRO</h2>
       <p className={styles.description}>
-        HUFS' largest algorithm competition, Code Festival, will be held on October 31.
+        HUFS's largest algorithm competition, Code Festival, will be held on October 31.
         <br />
-        Participants can choose between the Beginner Track, focused on basic skills, or the
+        Participants can choose between the Beginner Track for basic problem solvers, or the
         Challenger Track for more advanced problem solvers.
         <br />
         It's a great opportunity to challenge yourself and improve your skills.
         <br />
       </p>
-      <Link className={styles.directLink} href={FESTIVAL.current}>
-        제6회 코드페스티벌
+      <Link className={styles.directLink} href={FESTIVAL.current.href}>
+        {FESTIVAL.current.title}
         <Image
           src="/static/icons/ic_arrow_right_alt_24dp.svg"
           alt="navigate"

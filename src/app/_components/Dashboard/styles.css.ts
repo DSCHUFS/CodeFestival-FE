@@ -77,12 +77,21 @@ export const registerLink = style({
   border: `${rem(2)} solid ${theme.colors.white}`,
   borderRadius: rem(36),
   transition: 'color 0.3s, border-color 0.3s, background-color 0.3s',
-  opacity: 0.8,
+  opacity: 0.9,
 
   ':hover': {
     color: 'rgba(255, 255, 255, 0.8)',
     borderColor: 'rgba(255, 255, 255, 0.8)',
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  },
+});
+
+export const registerClosed = style({
+  opacity: 0.5,
+  ':hover': {
+    color: theme.colors.white,
+    borderColor: theme.colors.white,
+    backgroundColor: 'transparent',
   },
 });
 
