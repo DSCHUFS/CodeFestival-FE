@@ -1,5 +1,6 @@
 'use client';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ReactNode } from 'react';
 
 import useScreenSize from '@/hooks/useScreenSize';
@@ -14,6 +15,7 @@ const Providers = ({ children }: ProvidersProps) => {
   return (
     <>
       <Analytics />
+      <SpeedInsights />
       {children}
     </>
   );
