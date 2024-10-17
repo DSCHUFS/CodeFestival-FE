@@ -1,4 +1,5 @@
 'use client';
+import { Analytics } from '@vercel/analytics/react';
 import { ReactNode } from 'react';
 
 import useScreenSize from '@/hooks/useScreenSize';
@@ -10,7 +11,12 @@ type ProvidersProps = {
 const Providers = ({ children }: ProvidersProps) => {
   useScreenSize();
 
-  return <>{children}</>;
+  return (
+    <>
+      <Analytics />
+      {children}
+    </>
+  );
 };
 
 export default Providers;
