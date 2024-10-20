@@ -55,9 +55,10 @@ globalStyle(`${article} h4`, {
 });
 
 globalStyle(`${article} p`, {
+  marginTop: rem(16),
   fontSize: rem(16),
   fontWeight: 400,
-  marginTop: rem(16),
+  lineHeight: 1.8,
 });
 
 globalStyle(`${article} a`, {
