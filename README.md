@@ -100,6 +100,9 @@ export const FESTIVAL = {
 };
 ```
 
+### FAQ Page Content
+If you need to update the content of the FAQ page, update the `src/constants/faq.ts` file.
+
 To set up the latest competition, simply modify the `current` section in the `FESTIVAL` object. The previous
 competition, represented by `6`, will be archived automatically.
 
