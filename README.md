@@ -3,18 +3,19 @@
 <img src="https://codefestival.gdghufs.com/static/assets/thumbnail.png" width="100%" height="auto" alt="thumbnail"/>
 
 Welcome to the web frontend repository for the 2024 Hankuk University of Foreign Studies (HUFS) Code Festival. This
-repository contains the code for the landing page and competition archive.
-
+repository includes the code for the landing page, competition archive, and other festival features.
 
 ## Features
 
 - **Landing Page for Registration**: A dedicated page for participants to sign up for the Code Festival.
-- **Competition Details**: Information about the event, including schedules, categories, and judging criteria.
+- **Competition Details**: Detailed event information, such as schedules, categories, and judging criteria.
 - **FAQ Page**: Answers to common questions to help participants navigate the event smoothly.
-- **Gallery**: A section showcasing event highlights, previous competitions, and participant achievements, providing a glimpse into the Code Festival experience.
+- **Gallery**: A section showcasing event highlights, previous competitions, and participant achievements, providing a
+  glimpse into the Code Festival experience.
 
-These pages leverage Next.js's `Intercepting Routes` and `Parallel Routes`, allowing for greater flexibility in navigation and page rendering. This architecture ensures that users experience seamless transitions and efficient data loading across the platform.
-
+These pages leverage Next.js's `Intercepting Routes` and `Parallel Routes`, allowing for greater flexibility in
+navigation and page rendering. This architecture ensures that users experience seamless transitions and efficient data
+loading across the platform.
 
 ## Tech Stack
 
@@ -47,8 +48,9 @@ These pages leverage Next.js's `Intercepting Routes` and `Parallel Routes`, allo
   </tr>
 </table>
 
-
 ## Getting Started
+
+### Project Setup
 
 1. Clone the repository:
 
@@ -70,11 +72,42 @@ if you are not installed pnpm, install it first: `npm install -g pnpm`
   pnpm dev
 ```
 
+### Competition Setup
+
+1. Create a new markdown file in the `content/histories` folder, with the filename representing the competition round.
+2. Write the competition details in the newly created markdown file.
+3. Update the competition date displayed on the landing page in `src/constants/menu.ts`. Additionally, include the
+   registration link and competition page details in the header.
+
+If you are setting up the 7th Code Festival, you can configure it as follows:
+
+```typescript
+export const FESTIVAL = {
+  current: {
+    title: '7th Code Festival',
+    href: '/festival/7',
+    date: '2025-10-31',
+    registrationDeadline: '2025-10-20T23:59:59+09:00',
+    registrationLink: 'https://forms.gle/[7th-registration-link]',
+  },
+  6: {
+    title: '6th Code Festival',
+    href: '/festival/6',
+    date: '2024-10-31',
+    registrationDeadline: '2024-10-23T23:59:59+09:00',
+    registrationLink: 'https://forms.gle/dGGqMTxni4RL2Moq7',
+  },
+};
+```
+
+To set up the latest competition, simply modify the `current` section in the `FESTIVAL` object. The previous
+competition, represented by `6`, will be archived automatically.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
+This project is distributed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
 
 ## Contact
-If you have any questions, feel free to reach out via [Issues](https://github.com/GDGHUFS/CodeFestival-Web/issues) or contact me directly at [me@haklee.me](mailto:me@haklee.me).
+
+If you have any questions, feel free to reach out via [Issues](https://github.com/GDGHUFS/CodeFestival-Web/issues) or
+contact me directly at [me@haklee.me](mailto:me@haklee.me).
