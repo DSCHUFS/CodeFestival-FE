@@ -4,7 +4,6 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 
 import CIShape from '@/components/common/CIShape';
-import { BLUR } from '@/constants/blur';
 import { rem } from '@/utils/pxto';
 
 import * as styles from './page.css';
@@ -17,14 +16,7 @@ const Content = () => {
   return (
     <div className={styles.root}>
       <div className={styles.background}>
-        <Image
-          src="/static/images/bg.webp"
-          alt="background"
-          blurDataURL={BLUR.bg}
-          quality={100}
-          fill
-          priority
-        />
+        <Image src="/static/images/bg.webp" alt="background" quality={100} fill priority />
       </div>
 
       <div className={styles.content}>
